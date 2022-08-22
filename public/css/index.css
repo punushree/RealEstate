@@ -1,0 +1,78 @@
+
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
+.body{
+    font-family: 'Anton', sans-serif;
+width: 90%;
+}
+.navbar-custom {
+  background-color: lightgreen;
+}
+/* Modify brand and text color */
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+  color: green;
+}
+
+.navbar-light {
+  background-color: white !important;
+  border: none !important;
+  border-width: 0 !important;
+}
+.nav-link {
+  color: rgb(224, 39, 98) !important;
+}
+
+.nav-link.active {
+  color: rgb(32, 116, 19) !important;
+}
+.navbar-toggler {
+  color: rgb(32, 116, 19) !important;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+.carousel-item {
+height: 100vh;
+background-size: cover;
+}
+
+body{
+background-color: white;
+}
+
+.carousel-caption
+{
+  top: 68%;
+}
+
+
+.customer
+{
+    text-align: center;
+    text-decoration: wavy;
+    color: cadetblue;
+}
+
+.customerDiv{
+    background-color: aliceblue;
+    border-radius:10px;
+
+}
+.customerDiv .card {
+    background: #fff;
+    box-shadow: 0 8px 30px -7px #c9dff0;
+    margin: 0 20px;
+    padding: 0 10px;
+    border-radius: 20px;
+    border: 0;
+   
+    min-height: 400px;
+}
+.customerDiv .card  .card-img-top {
+      max-width: 100px;
+      border-radius: 50%;
+      margin: 15px auto 0;
+      box-shadow: 0 8px 20px -4px #95abbb;
+      width: 100px;
+      height: 100px;
+    }

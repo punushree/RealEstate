@@ -3,7 +3,7 @@
 
 .body{
     font-family: 'Anton', sans-serif;
-width: 90%;
+
 }
 .navbar-custom {
   background-color: lightgreen;
@@ -44,15 +44,41 @@ background-color: white;
 {
   top: 68%;
 }
-
+.footer{
+  text-align: center;
+  text-decoration: wavy;
+  color: cadetblue;
+}
 
 .customer
 {
     text-align: center;
-    text-decoration: wavy;
     color: cadetblue;
 }
+.propertygrid .col-8{
+ 
+  background-color: white;
+  border:none;
 
+}
+.propertygrid .col-4{
+ 
+  background-color: white;
+  border:none;
+}
+.propertygrid .col-8 .data{
+ 
+  background-color: white;
+  border: none;
+}
+.propertygrid .col-4 .filter{
+ 
+  background-color: cadetblue;
+  height: 500px;
+ color: white;
+ border-radius: 20px;
+
+}
 .customerDiv{
     background-color: aliceblue;
     border-radius:10px;
@@ -76,3 +102,211 @@ background-color: white;
       width: 100px;
       height: 100px;
     }
+
+.plusminus
+{
+  font-size:28px;
+  color:white;
+}
+
+.about{
+  background-image: url('../images/bg.jpg');
+  height:600px;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  color: black;
+  opacity: 0.8;
+}
+
+    .card {
+      height: 310px;
+      width: 300px;
+      background-color: #fff;
+      border-radius: 20px;
+      position: relative;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 20px;
+      margin-left: 20px;
+  }
+  
+  .card .offer {
+      width: 150px;
+      height: 40px;
+      background-color: red;
+      position: absolute;
+      top: 28px;
+      left: -14px;
+      border-radius: 20px;
+      border-bottom-left-radius: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff
+  }
+  
+  .card span:before {
+      position: absolute;
+      content: '';
+      background-color: red;
+      height: 30px;
+      width: 17px;
+      top: 20px;
+      left: 0px;
+      border-radius: 10px;
+      z-index: -10
+  }
+  
+  .card span:after {
+      position: absolute;
+      content: '';
+      background-color: #d70303;
+      height: 30px;
+      width: 17px;
+      top: 30px;
+      left: 0px;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 20px;
+      z-index: -10
+  }
+  
+  .card .item-image {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px
+      
+  }
+  
+  .card .item-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover
+  }
+  
+  .item-content {
+      padding: 10px
+  }
+  
+  .item-content h3 {
+      font-size: 20px
+  }
+  
+  .item-content p {
+      font-size: 15px;
+      font-weight: 500
+  }
+  
+  .item-price {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between
+  }
+  .item-area {
+    white-space:nowrap;
+    display: flex;
+    justify-content: space-between
+}
+
+  .contact-form{
+    background: #fff;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    width: 70%;
+}
+ .form-control{
+    border-radius:1rem;
+}
+ .btnContact {
+  width: 50%;
+  border: none;
+  border-radius: 1rem;
+  padding: 1.5%;
+  background: #dc3545;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  align-items: center;
+ }
+
+ .MuiSlider-rail{
+  background-color: #dc3545;
+ }
+ 
+ .MuiSlider-root
+ {
+
+  color: #dc3545;
+ }
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+@media screen and (min-width: 997px) {
+  .wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; } }
+
+.single.details {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+
+.review-no
+{
+  text-transform: UPPERCASE;
+  font-weight: bold;
+}
+.product-title, .price, .sizes, .colors {
+  text-transform: UPPERCASE;
+  font-weight: bold; }
+
+.product-title, .rating, .product-description, .price, .vote, .sizes {
+  margin-bottom: 15px; }
+  .price
+  {
+    color:red;
+  }
+.product-title {
+  margin-top: 0; }
+
+.size {
+  margin-right: 10px; }
+  .size:first-of-type {
+    margin-left: 40px; }
+
+
+.add-to-cart, .like {
+  background: #ff9f1a;
+  padding: 1.2em 1.5em;
+  border: none;
+  text-transform: UPPERCASE;
+  font-weight: bold;
+  color: #fff;
+  -webkit-transition: background .3s ease;
+          transition: background .3s ease; }
+  .add-to-cart:hover, .like:hover {
+    background: #b36800;
+    color: #fff; }
+
+    

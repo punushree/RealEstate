@@ -12,7 +12,7 @@
 
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-text {
-  color: green;
+  color: rgb(93, 156, 144);
 }
 
 .navbar-light {
@@ -25,10 +25,10 @@
 }
 
 .nav-link.active {
-  color: rgb(32, 116, 19) !important;
+  color: rgb(93, 156, 144) !important;
 }
 .navbar-toggler {
-  color: rgb(32, 116, 19) !important;
+  color: rgb(93, 156, 144) !important;
   border-color: rgba(0, 0, 0, 0.1);
 }
 .carousel-item {
@@ -47,13 +47,18 @@ background-color: white;
 .footer{
   text-align: center;
   text-decoration: wavy;
-  color: cadetblue;
+  color: rgb(93, 156, 144);
 }
 
 .customer
 {
     text-align: center;
-    color: cadetblue;
+    color: rgb(93, 156, 144);
+    font-family: cursive;
+    font-style: oblique;
+    font-size: x-large;
+    text-shadow: 2px 2px rgb(68, 131, 119);
+    margin-right: 40px;
 }
 .propertygrid .col-8{
  
@@ -73,7 +78,7 @@ background-color: white;
 }
 .propertygrid .col-4 .filter{
  
-  background-color: cadetblue;
+  background-color: rgb(93, 156, 144);
   height: 500px;
  color: white;
  border-radius: 20px;
@@ -98,7 +103,7 @@ background-color: white;
       max-width: 100px;
       border-radius: 50%;
       margin: 15px auto 0;
-      box-shadow: 0 8px 20px -4px #95abbb;
+      box-shadow: 0 8px 20px -4px rgb(93, 156, 144);
       width: 100px;
       height: 100px;
     }
@@ -108,15 +113,21 @@ background-color: white;
   font-size:28px;
   color:white;
 }
+.next {
+  background-color: rgb(93, 156, 144);
+  color: white;
+}
 
+.round {
+  border-radius: 50%;
+}
 .about{
   background-image: url('../images/bg.jpg');
   height:600px;
   width: 100%;
   align-items: center;
   text-align: center;
-  color: black;
-  opacity: 0.8;
+  color: whitesmoke;
 }
 
     .card {
@@ -133,7 +144,7 @@ background-color: white;
   .card .offer {
       width: 150px;
       height: 40px;
-      background-color: red;
+      background-color: rgb(224, 39, 98);
       position: absolute;
       top: 28px;
       left: -14px;
@@ -150,7 +161,7 @@ background-color: white;
   .card span:before {
       position: absolute;
       content: '';
-      background-color: red;
+      background-color: rgb(224, 39, 98);
       height: 30px;
       width: 17px;
       top: 20px;
@@ -162,7 +173,7 @@ background-color: white;
   .card span:after {
       position: absolute;
       content: '';
-      background-color: #d70303;
+      background-color: rgb(224, 39, 98);
       height: 30px;
       width: 17px;
       top: 30px;
@@ -225,7 +236,7 @@ background-color: white;
   border: none;
   border-radius: 1rem;
   padding: 1.5%;
-  background: #dc3545;
+  background: rgb(224, 39, 98);
   font-weight: 600;
   color: #fff;
   cursor: pointer;
@@ -233,13 +244,13 @@ background-color: white;
  }
 
  .MuiSlider-rail{
-  background-color: #dc3545;
+  background-color: rgb(224, 39, 98);
  }
  
  .MuiSlider-root
  {
 
-  color: #dc3545;
+  color: rgb(224, 39, 98);
  }
 
 
@@ -285,7 +296,7 @@ background-color: white;
   margin-bottom: 15px; }
   .price
   {
-    color:red;
+    color:rgb(224, 39, 98);
   }
 .product-title {
   margin-top: 0; }
@@ -297,7 +308,7 @@ background-color: white;
 
 
 .add-to-cart, .like {
-  background: #ff9f1a;
+  background: rgb(224, 39, 98);
   padding: 1.2em 1.5em;
   border: none;
   text-transform: UPPERCASE;

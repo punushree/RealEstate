@@ -1,9 +1,8 @@
-import React, { useState } from "react"
-import { nav } from "../data/data"
-import { Link } from "react-router-dom"
+import React from "react"
+
 
 const Header = () => {
-  const [navList, setNavList] = useState(false)
+
 
   return (
     <>

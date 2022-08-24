@@ -1,24 +1,16 @@
 import React from "react"
-import Back from "../common/Back"
-import Heading from "../common/Heading"
-import img from "../images/about.jpg"
-import "./about.css"
 
 const About = () => {
   return (
     <>
-      <section className='about'>
-        <Back name='About Us' title='About Us - Who We Are?' cover={img} />
-        <div className='container flex mtop'>
-          <div className='left row'>
+      <div className="about mb-3">
 
-                      <button className='btn2'>More About Us</button>
-          </div>
-          <div className='right row'>
-            <img src='./immio.jpg' alt='' />
-          </div>
-        </div>
-      </section>
+<h2>ABOUT US</h2>
+<p>We at abode strive to get customer happiness and satisfaction</p>
+<p>For more detail contact us</p>
+<p>+4343478734</p>
+
+      </div>
     </>
   )
 }

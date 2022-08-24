@@ -32,33 +32,41 @@ const options = {
 const Home = () => {
   return (
     <>
-     <div class="m-2"> 
-     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+     <div class=" .container-fluid m-2"> 
+     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
   <div class="carousel-inner">
-    <div class="carousel-item active">
-    <img src='../images/home1.jpg' class="d-block w-100" alt="..." height="500px"/>
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Search Your Dream Home </h5>
-        <p>Find beautiful apartment, flat and villas.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
+  
+    <div class="carousel-item active" data-interval="5000">
     <img src='../images/home2.jpg' class="d-block w-100" alt="..." height="500px"/>
       <div class="carousel-caption d-none d-md-block">
-        <h5>Explore by Locations</h5>
-        <p>Find home in amazing localities.</p>
+        <h5><b>Explore by Locations</b></h5>
+        <p><b>Find home in amazing localities.</b></p>
       </div>
     </div>
-    <div class="carousel-item">
+    <div class="carousel-item" data-interval="5000">
     <img src='../images/home3.jpg' class="d-block w-100" alt="..." height="500px"/>
       <div class="carousel-caption d-none d-md-block">
-        <h5>Rent Apartment</h5>
-        <p>Find rented appartment at affordable rates.</p>
+        <h5><b>Rent Apartment</b></h5>
+        <p><b>Find rented appartment at affordable rates.</b></p>
+      </div>
+    </div>
+    <div class="carousel-item " data-interval="5000">
+    <img src='../images/vill.jpg' class="d-block w-100" alt="..." height="500px"/>
+      <div class="carousel-caption d-none d-md-block">
+        <h5><b>Search Your Dream Home </b></h5>
+        <p><b>Find beautiful apartment, flat and villas.</b></p>
+      </div>
+    </div>
+    <div class="carousel-item" data-interval="5000">
+    <img src='../images/villa.jpg' class="d-block w-100" alt="..." height="500px"/>
+      <div class="carousel-caption d-none d-md-block">
+        <h5><b>Beautiful interior</b></h5>
+        <p><b>Find fully furnished / unfurnished apartment</b></p>
       </div>
     </div>
   </div>
@@ -85,7 +93,7 @@ const Home = () => {
       <img class="card-img-top"  height="200px " src="https://images.unsplash.com/photo-1572561300743-2dd367ed0c9a?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=300" alt=""/>
         <div class="card-body">
           <h5>Ronne Galle <br />
-            <span> Project Manager </span>
+            <span>Villa Owner </span>
           </h5>
           <p class="card-text">“ We have found our dream home here. Amazing options to consider” </p>
         </div>
@@ -96,7 +104,7 @@ const Home = () => {
       <img class="card-img-top"  height="200px "  src="https://images.unsplash.com/photo-1588361035994-295e21daa761?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=301" alt=""/>
         <div class="card-body">
           <h5>Missy Limana<br />
-            <span> Engineer </span>
+            <span> House owner </span>
           </h5>
           <p class="card-text">“ Thank you so much for all your assistance in finding us a very decent expat tenant for our villa  @Abode. We are very much satisfied with the service of Abode®.  ” </p>
         </div>
@@ -106,8 +114,8 @@ const Home = () => {
       <div class="card text-center">
       <img class="card-img-top" height="200px "  src="https://images.unsplash.com/photo-1575377222312-dd1a63a51638?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=302&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=302" alt=""/>
         <div class="card-body">
-          <h5>Martha Brown<br />
-            <span> Project Manager </span>
+          <h5>Peter Martha<br />
+            <span> Tenant </span>
           </h5>
           <p class="card-text">“They are a very professional real estate agency in Chennai with good selection of places. More importantly, they spend time with the client to show variety of options.  ” </p>
         </div>
@@ -118,7 +126,7 @@ const Home = () => {
       <img class="card-img-top"  height="200px "  src="https://images.unsplash.com/photo-1549836938-d278c5d46d20?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=303&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=303" alt=""/>
         <div class="card-body">
           <h5>Hanna Lisem<br />
-            <span> Project Manager </span>
+            <span> Agent </span>
           </h5>
           <p class="card-text">“ I am a proud owner of a beautiful Villa.Have already referred you to a couple of friends! Thanks and Regards ” </p>
         </div>

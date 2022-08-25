@@ -6,7 +6,7 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 import { useNavigate } from "react-router-dom";
 import { useLocation } from 'react-router-dom';
 import { fetchdefault, fetchlocation, fetchSubmit } from '../../utils/handleApi';
-import { rentdata,loc,rentdata2 } from  "../../components/data/data.js"
+import { loc, propData } from "../../components/data/data.js"
 
 const optionsc = {
     margin: 8,
@@ -44,9 +44,12 @@ const Property = () => {
     const [loading, setLoading] = useState(false);
 
     const [locationData, setLocationData] = useState(loc);
+    let rentdata = propData.filter(function (obj, index) {
+        return obj.purpose === "for-rent";
+    })
     const [propertyData, setPropertyData] = useState(rentdata);
 
-   const [loction, setLoction] = useState(6020);
+    const [loction, setLoction] = useState(6020);
     const [type, setType] = useState(4);
     const [price, setPrice] = useState([100000, 1000000]);
     const [area, setArea] = useState([100, 10000]);
@@ -101,7 +104,7 @@ const Property = () => {
         loadlocation();
         loaddefault();
     }, []);
-    const loadlocation =async  () => {
+    const loadlocation = async () => {
         setLoading(true);
         // console.log("loading location");
         // const data = await fetchlocation();
@@ -114,9 +117,12 @@ const Property = () => {
         // console.log("loading default");
         // const data = await fetchdefault(optionsdefault);
         // setPropertyData(data?.hits);
-        setPropertyData(rentdata);
+        let result = propData.filter(function (obj, index) {
+            return obj.purpose === "for-rent";
+        })
+        setPropertyData(result);
         setLoading(false);
-        
+        console.log("Default*********" +JSON.stringify( result));
     };
     const optionsdefault = {
         method: 'GET',
@@ -141,7 +147,7 @@ const Property = () => {
             'X-RapidAPI-Host': 'bayut.p.rapidapi.com'
         }
     };
-    const handlesubmit = async() => {
+    const handlesubmit = async () => {
         // const optionssubmit = {
         //     method: 'GET',
         //     url: 'https://bayut.p.rapidapi.com/properties/list',
@@ -168,18 +174,30 @@ const Property = () => {
         // console.log(optionssubmit);
         // const data = await fetchSubmit(optionssubmit);
         // setPropertyData(data?.hits);
-       setPropertyData( rentdata2);
+        console.log("@@@@@@@RentData" + JSON.stringify(rentdata))
+       
+
+        let finalData = rentdata.filter(function (obj, index) {
+            let menu = obj.location.some(({externalID}) => externalID === loction)&&
+            obj.category.some(({externalID}) => externalID === type)
+            return menu
+        });
+        console.log("final*********"+JSON.stringify(finalData));
+
+        // rentdata.filter(object => object.location.target.includes(target_filter))
+
+        setPropertyData(finalData);
     };
 
 
     const toComponentB = (external) => {
         console.log("typepass" + type)
-        navigate('/single', { state: { externalID: external, data: propertyData,fortype:'rent' } });
+        navigate('/single', { state: { externalID: external, data: propertyData, fortype: 'rent' } });
     }
 
     return (
         <>
-        {loading && <div class="text-center" style={{ color: '#dc3545' }}><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></div>}
+            {loading && <div class="text-center" style={{ color: '#dc3545' }}><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></div>}
 
             <div className=" propertygrid container overflow-hidden">
                 <div className="row gx-5">
@@ -231,9 +249,8 @@ const Property = () => {
                                 <select id="catagory" value={type} onChange={handletype} className='form-control'>
                                     <option value="4">Apartment</option>
                                     <option value="3">Villas</option>
-                                    <option value="17">Residential Building</option>
-                                    <option value="21">Hotel Apartments</option>
-                                    <option value="18">Penthouse</option>
+                                    <option value="1">Residential Building</option>
+
                                 </select>
                             </div>
                             <div class="mb-3 item-area " >

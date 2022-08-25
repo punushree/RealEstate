@@ -2,38 +2,39 @@ import React, { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom";
 import { useLocation } from 'react-router-dom';
 import { fetchSingle } from "../../utils/handleApi";
-import { rentproperty,saleproperty } from  "../../components/data/data.js"
+import { Detailproperty } from  "../../components/data/data.js"
 
 const axios = require("axios");
 
 const SinglePropery = () => {
     const navigate = useNavigate();
     const location = useLocation();
-    const [propertyData, setPropertyData] = useState(rentproperty);
+    const [propertyData, setPropertyData] = useState();
     const [loading, setLoading] = useState(false);
 
     const toComponentB = () => {
         navigate(-1, { state: { type: location.state.data } });
     }
     useEffect(() => {
-        console.log(rentproperty);
+        console.log(Detailproperty);
         console.log("inside hook" + JSON.stringify(location));
-         console.log("inside hook" + location?.state?.fortype)
-         if(location?.state?.fortype==='sale')
-         {
-            setPropertyData(saleproperty);
-         }
-         else{
-            setPropertyData(rentproperty);
+         console.log("inside hook" + location?.state?.externalID)
+         setLoading(true);
+         let finalData = Detailproperty.filter(function(obj, index){
+            return (obj.externalID===location?.state?.externalID );
+          })
+          console.log("finalDataSingleview*********"+JSON.stringify(finalData));
 
-         }
+          setPropertyData(finalData[0])
+          setLoading(false);
+
         // setLoading(true);
 
         // if (location?.state?.externalID) {
         //     loaddata();
         // }
         // setLoading(false);
-        loaddata();
+        //loaddata();
     }, []);
 
     const loaddata =async () => {
@@ -49,14 +50,13 @@ const SinglePropery = () => {
 
         // const data = await fetchSingle(options);
         // setPropertyData(data)
-        setPropertyData(saleproperty)
     };
 
     return (
         <>
             <button class="btn previous round"  onClick={() => { toComponentB() }}><i class="fa fa-backward" ></i></button>
 
-            {loading && <div class="text-center" style={{ color: '#dc3545' }}><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></div>}
+            {propertyData?.length>0&&loading && <div class="text-center" style={{ color: '#dc3545' }}><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></div>}
 
             <div class="container single">
                 <div class="wrapper row">
